@@ -46,7 +46,7 @@ public class SeleccionDAO {
 
         try (Connection connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
              Statement statement = connection.createStatement()) {
-            String query = "SELECT * FROM j_monsalve3.users WHERE username = '" + usuario+ "' AND password = '" + contraseña+ "'";
+            String query = "SELECT * FROM j_leal5.sesion WHERE username = '" + usuario+ "' AND password = '" + contraseña+ "'";
             ResultSet resultSet = statement.executeQuery(query);
             return resultSet.next();
         } catch (SQLException e) {
